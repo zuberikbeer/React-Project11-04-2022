@@ -1,5 +1,6 @@
 import axios from "axios";
 import ComplexSearchResponse from "../models/ComplexSearchResponse";
+import DetailedRecipeResponse from "../models/DetailedRecipeResponse";
 
 const apiKey: string = process.env.REACT_APP_RECIPE_API_KEY || "";
 
@@ -12,7 +13,7 @@ export const getRecipe = (): Promise<ComplexSearchResponse> => {
 
 export const getRecipeInformation = (
   id: string
-): Promise<ComplexSearchResponse> => {
+): Promise<DetailedRecipeResponse> => {
   return axios
     .get(`https://api.spoonacular.com/recipes/${id}/information`, {
       params: { apiKey: apiKey },
