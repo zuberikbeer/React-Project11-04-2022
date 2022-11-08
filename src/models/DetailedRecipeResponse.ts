@@ -1,6 +1,6 @@
 export default interface DetailedRecipeResponse {
   title: string;
   image: string;
-  cookingMinutes: number;
+  readyInMinutes: number;
   instructions: string;
 }

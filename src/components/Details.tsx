@@ -11,14 +11,28 @@ const Details = () => {
   console.log(id);
 
   useEffect(() => {
-    getRecipeInformation(id).then((res) => setRecipe(res));
+    getRecipeInformation(id).then((res) => {
+      setRecipe(res);
+      console.log(res);
+    });
   }, [id]);
 
   return (
     <div className="Details">
-      <h1>{recipe?.title}</h1>
-      <img src={recipe?.image} />
-      <p>Cooking Time:{recipe?.cookingMinutes}</p>
+      {recipe ? (
+        <div className="recipes">
+          <h1>{recipe?.title}</h1>
+          <img src={recipe?.image} />
+          <p>
+            Cooking Time:
+            {recipe?.readyInMinutes > 0
+              ? recipe?.readyInMinutes
+              : "Information not found! :( "}
+          </p>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };

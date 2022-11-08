@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ComplexSearchResponse from "../models/ComplexSearchResponse";
 import { getRecipe } from "../services/RecipeApiServices";
 import "./Main.css";
 import Recipe from "../models/Recipe";
 import { Link } from "react-router-dom";
+
+interface Props {
+  oneRecipe: Recipe;
+}
 
 const Main = () => {
   const [recipeResults, setRecipeResults] = useState<Recipe[]>([]);
@@ -24,6 +28,7 @@ const Main = () => {
               <p>{result.title}</p>
               <img src={result.image} alt={result.title} />
             </Link>
+            <button onClick={() => {}}>&hearts;</button>
           </li>
         ))}
         ;
