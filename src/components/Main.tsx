@@ -1,39 +1,37 @@
 import { useContext, useEffect, useState } from "react";
 import ComplexSearchResponse from "../models/ComplexSearchResponse";
-import { getRecipe } from "../services/RecipeApiServices";
+import {
+  getRecipeInformation,
+  searchRecipes,
+} from "../services/RecipeApiServices";
 import "./Main.css";
 import Recipe from "../models/Recipe";
-import { Link } from "react-router-dom";
-
-interface Props {
-  oneRecipe: Recipe;
-}
+import Result from "./Result";
+import Form from "./Form";
 
 const Main = () => {
   const [recipeResults, setRecipeResults] = useState<Recipe[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    getRecipe().then((res) => {
-      setRecipeResults(res.results);
-      console.log(res.results);
-    });
-  }, []);
+    if (searchTerm !== "") {
+      searchRecipes(searchTerm).then((res) => {
+        setRecipeResults(res.results);
+        console.log(res.results);
+      });
+    }
+  }, [searchTerm]);
 
   return (
-    <div className="Main">
+    <main className="Main">
+      <Form setTerm={setSearchTerm} />
       <ul>
         {recipeResults.map((result) => (
-          <li key={result.id} title={result.title}>
-            <Link to={`/details/${result.id}`}>
-              <p>{result.title}</p>
-              <img src={result.image} alt={result.title} />
-            </Link>
-            <button onClick={() => {}}>&hearts;</button>
-          </li>
+          <Result resultProp={result} />
         ))}
         ;
       </ul>
-    </div>
+    </main>
   );
 };
 

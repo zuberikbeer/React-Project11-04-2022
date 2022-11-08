@@ -29,6 +29,7 @@ const Details = () => {
               ? recipe?.readyInMinutes
               : "Information not found! :( "}
           </p>
+          <a href={recipe.sourceUrl}>Looking for the recipe? Click here!</a>
         </div>
       ) : (
         <p>Loading...</p>

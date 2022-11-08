@@ -3,4 +3,5 @@ export default interface DetailedRecipeResponse {
   image: string;
   readyInMinutes: number;
   instructions: string;
+  sourceUrl: string;
 }

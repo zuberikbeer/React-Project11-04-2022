@@ -4,9 +4,13 @@ import DetailedRecipeResponse from "../models/DetailedRecipeResponse";
 
 const apiKey: string = process.env.REACT_APP_RECIPE_API_KEY || "";
 
-export const getRecipe = (): Promise<ComplexSearchResponse> => {
+export const searchRecipes = (
+  searchTerm: string
+): Promise<ComplexSearchResponse> => {
   return axios
-    .get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}`)
+    .get(`https://api.spoonacular.com/recipes/complexSearch`, {
+      params: { apiKey, query: searchTerm, number: 30 },
+    })
     .then((res) => res.data)
     .catch((err) => console.log(err));
 };
