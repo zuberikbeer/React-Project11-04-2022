@@ -12,24 +12,27 @@ import Form from "./Form";
 const Main = () => {
   const [recipeResults, setRecipeResults] = useState<Recipe[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [findDiet, setFindDiet] = useState("");
+  const [findCalories, setFindCalories] = useState("");
 
   useEffect(() => {
-    if (searchTerm !== "") {
-      searchRecipes(searchTerm).then((res) => {
-        setRecipeResults(res.results);
-        console.log(res.results);
-      });
-    }
-  }, [searchTerm]);
+    searchRecipes(searchTerm, findDiet, +findCalories).then((res) => {
+      setRecipeResults(res.results);
+      console.log(res.results);
+    });
+  }, [searchTerm, findDiet, findCalories]);
 
   return (
     <main className="Main">
-      <Form setTerm={setSearchTerm} />
+      <Form
+        setTerm={setSearchTerm}
+        dietSelect={setFindDiet}
+        calorieSelect={setFindCalories}
+      />
       <ul>
         {recipeResults.map((result) => (
           <Result resultProp={result} />
         ))}
-        ;
       </ul>
     </main>
   );

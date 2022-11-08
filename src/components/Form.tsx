@@ -3,18 +3,23 @@ import "./Form.css";
 
 interface Props {
   setTerm: (something: string) => void;
+  dietSelect: (something: string) => void;
+  calorieSelect: (something: string) => void;
 }
 
-const Form = ({ setTerm }: Props) => {
+const Form = ({ setTerm, dietSelect, calorieSelect }: Props) => {
   const [recipeSearch, setRecipeSearch] = useState("");
-
+  const [dietSearch, setDietSearch] = useState("");
+  const [searchCalories, setSearchCalories] = useState("");
   const submitHandler = (e: FormEvent) => {
     e.preventDefault();
     setTerm(recipeSearch);
+    dietSelect(dietSearch);
+    calorieSelect(searchCalories);
   };
 
   return (
-    <form className="Form" onSubmit={submitHandler}>
+    <form className="Form" id="form" onSubmit={submitHandler}>
       <label htmlFor="searchTerm">Search Here</label>
       <div className="recipe-name">
         <input
@@ -26,6 +31,44 @@ const Form = ({ setTerm }: Props) => {
             setRecipeSearch(e.target.value);
           }}
         />
+        <label htmlFor="diet">Choose a diet type:</label>
+        <select
+          name="diet-type"
+          id="diet"
+          form="form"
+          value={dietSearch}
+          onChange={(e) => {
+            setDietSearch(e.target.value);
+          }}
+        >
+          <option value="">No preference</option>
+          <option value="gluten-free">Gluten Free</option>
+          <option value="ketogenic">Ketogenic</option>
+          <option value="vegetarian">Vegetarian</option>
+          <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+          <option value="ovo-vegetarian">Ovo-Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="pescetarian">Pescetarian</option>
+          <option value="paleo">Paleo</option>
+          <option value="primal">Primal</option>
+          <option value="low-fodmap">Low FODMAP</option>
+          <option value="whole-30">Whole30</option>
+        </select>
+        <label htmlFor="calories">Find by calories</label>
+        <input
+          type="range"
+          id="calories"
+          name="calories"
+          min="50"
+          max="2000"
+          value={searchCalories}
+          onChange={(e) => {
+            setSearchCalories(e.target.value);
+          }}
+          step="10"
+        />
+        <p>{searchCalories}</p>
+
         <button>Search</button>
       </div>
     </form>
