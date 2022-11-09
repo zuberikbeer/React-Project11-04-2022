@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #f1ab24;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .Header .home-link {
@@ -12,7 +12,14 @@
 
 .Header h1 {
   display: flex;
+  align-items: center;
   color: #5f5d5d;
+}
+
+.Header .peanut {
+  margin: 3px 0px 3px 3px;
+  height: 75px;
+  width: 75px;
 }
 
 .Header .favorites-link {

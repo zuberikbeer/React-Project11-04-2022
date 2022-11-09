@@ -4,4 +4,5 @@ export default interface DetailedRecipeResponse {
   readyInMinutes: number;
   instructions: string;
   sourceUrl: string;
+  servings: number;
 }

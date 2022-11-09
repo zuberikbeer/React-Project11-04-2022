@@ -12,7 +12,7 @@ const Result = ({ resultProp }: Props) => {
   const { addFavorite, removeFavorite, isFav } = useContext(FavoritesContext);
   return (
     <li className="Result" key={resultProp.id} title={resultProp.title}>
-      <Link to={`/details/${resultProp.id}`}>
+      <Link to={`/details/${resultProp.id}`} className="imgTitle">
         <p>{resultProp.title}</p>
         <img
           className="ResultImg"
@@ -27,7 +27,7 @@ const Result = ({ resultProp }: Props) => {
             addFavorite(resultProp);
           }}
         >
-          &hearts;
+          Add to Favorites <div className="heart">&hearts;</div>
         </button>
       ) : (
         <button
@@ -36,7 +36,8 @@ const Result = ({ resultProp }: Props) => {
             removeFavorite(resultProp.id);
           }}
         >
-          &hearts;
+          Remove from Favorites{" "}
+          <div className="heart removeHeart">&hearts;</div>
         </button>
       )}
     </li>

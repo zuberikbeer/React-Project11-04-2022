@@ -11,12 +11,17 @@
   justify-content: center;
   align-items: center;
   background-color: #ee6055;
+  font-weight: bold;
 }
 
 .Form .recipe-name {
   display: flex;
   padding: 28px 10px;
   background-color: #ee6055;
+}
+
+.Form #searchTerm {
+  width: 140px;
 }
 
 .Form .range-input {
@@ -79,7 +84,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 10px;
   /* cursor: ew-resize; */
-  background: #434343;
-  box-shadow: -80px 0 0 80px #43e5f7;
+  background: #5f5d5d;
+  box-shadow: -85px 0 0 80px #f4e87c;
   border-radius: 50%;
 }
