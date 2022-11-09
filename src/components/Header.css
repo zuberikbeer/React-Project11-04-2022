@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f1ab24;
+  padding: 10px;
 }
 
 .Header .home-link {
@@ -10,11 +12,14 @@
 
 .Header h1 {
   display: flex;
+  color: #5f5d5d;
 }
 
 .Header .favorites-link {
   display: flex;
   text-decoration: none;
+  color: #5f5d5d;
+  font-weight: 600;
 }
 
 .Header .favorites-link:hover {

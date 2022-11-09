@@ -3,10 +3,23 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: #addb73;
 }
 
 .Main ul {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   list-style: none;
+}
+
+.Main food {
+  display: flex;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

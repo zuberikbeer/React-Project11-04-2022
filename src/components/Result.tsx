@@ -14,10 +14,15 @@ const Result = ({ resultProp }: Props) => {
     <li className="Result" key={resultProp.id} title={resultProp.title}>
       <Link to={`/details/${resultProp.id}`}>
         <p>{resultProp.title}</p>
-        <img src={resultProp.image} alt={resultProp.title} />
+        <img
+          className="ResultImg"
+          src={resultProp.image}
+          alt={resultProp.title}
+        />
       </Link>
       {!isFav(resultProp.id) ? (
         <button
+          className="fav"
           onClick={() => {
             addFavorite(resultProp);
           }}
@@ -26,7 +31,7 @@ const Result = ({ resultProp }: Props) => {
         </button>
       ) : (
         <button
-          className="fav"
+          className="fav notFav"
           onClick={() => {
             removeFavorite(resultProp.id);
           }}
