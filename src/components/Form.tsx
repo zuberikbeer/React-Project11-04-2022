@@ -51,9 +51,7 @@ const Form = ({ setTerm, dietSelect, calorieSelect }: Props) => {
           <p className="searchCalories">{searchCalories}</p>
         </div>
         <div className="select-input">
-          <label className="select-label" htmlFor="diet">
-            Choose a diet type:
-          </label>
+          <label className="select-label" htmlFor="diet"></label>
           <select
             name="diet-type"
             id="diet"
@@ -63,7 +61,7 @@ const Form = ({ setTerm, dietSelect, calorieSelect }: Props) => {
               setDietSearch(e.target.value);
             }}
           >
-            <option value="">No preference</option>
+            <option value="">Choose a diet type</option>
             <option value="gluten-free">Gluten Free</option>
             <option value="ketogenic">Ketogenic</option>
             <option value="vegetarian">Vegetarian</option>

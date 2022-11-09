@@ -1,0 +1,61 @@
+.Details {
+  margin: 10px;
+}
+
+.Details h1 {
+  color: black;
+  font-family: "Gochi Hand", cursive;
+}
+
+.Details .recipes {
+  display: flex;
+}
+
+.Details .img-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.Details .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 375px;
+  background-color: #f4e87c;
+  border-radius: 5px;
+}
+
+.Details img {
+  height: 280px;
+  width: 328px;
+}
+
+.Details .clean-text {
+  margin-left: 10px;
+  background-color: #6fa82a;
+  border-radius: 5px;
+}
+
+.Details p {
+  margin: 0;
+  margin-top: 5px;
+  padding: 5px;
+  color: black;
+  font-family: "Gochi Hand", cursive;
+  border-radius: 5px;
+}
+
+.Details .small-details {
+  background-color: #ee6055;
+}
+
+.Details a {
+  border-radius: 5px;
+  background-color: #ee6055;
+  color: black;
+  text-decoration: none;
+  font-family: "Gochi Hand", cursive;
+  margin-top: 5px;
+  padding: 5px;
+}

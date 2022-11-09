@@ -8,7 +8,7 @@
 
 .Main ul {
   margin: 0px;
-  padding: 0px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -18,8 +18,11 @@
   display: flex;
 }
 
-li {
+.Main li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
+  width: 430px;
+  border-radius: 30px;
 }

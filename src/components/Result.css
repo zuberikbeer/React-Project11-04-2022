@@ -9,16 +9,31 @@
   display: flex;
   flex-direction: column;
 }
-.Result li Link p {
+
+.Result .imgTitle {
   text-decoration: none;
+  font-family: "Aboreto", cursive;
+  color: #5f5d5d;
 }
 
 .Result .fav {
   display: flex;
   justify-content: center;
   width: 50%;
+  color: #5f5d5d;
+  background-color: #f1ab24;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+}
+
+.Result .heart {
+  color: black;
+  margin-left: 5px;
+}
+
+.Result .removeHeart {
   color: red;
-  background-color: black;
 }
 
 .Result .ResultImg {
