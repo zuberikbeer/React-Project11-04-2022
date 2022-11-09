@@ -29,7 +29,7 @@ const Main = () => {
         dietSelect={setFindDiet}
         calorieSelect={setFindCalories}
       />
-      <ul>
+      <ul className="food">
         {recipeResults.map((result) => (
           <Result key={result.id} resultProp={result} />
         ))}
