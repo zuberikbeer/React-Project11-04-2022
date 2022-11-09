@@ -31,7 +31,7 @@ const Main = () => {
       />
       <ul>
         {recipeResults.map((result) => (
-          <Result resultProp={result} />
+          <Result key={result.id} resultProp={result} />
         ))}
       </ul>
     </main>

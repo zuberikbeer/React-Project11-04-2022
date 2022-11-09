@@ -1,0 +1,13 @@
+.Result li {
+  display: flex;
+  flex-direction: column;
+}
+.Result li Link p {
+  text-decoration: none;
+}
+.Result li p {
+}
+
+.Result button {
+  display: flex;
+}

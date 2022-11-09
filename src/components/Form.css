@@ -1,0 +1,22 @@
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form .recipe-name {
+  display: flex;
+}
+
+.Form .select-input {
+  display: flex;
+}
+
+.Form .select-label {
+  display: flex;
+  align-items: center;
+}
+
+.Form .range-input {
+  display: flex;
+}
