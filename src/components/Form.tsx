@@ -20,18 +20,23 @@ const Form = ({ setTerm, dietSelect, calorieSelect }: Props) => {
 
   return (
     <form className="Form" id="form" onSubmit={submitHandler}>
-      <label htmlFor="searchTerm">Search Here</label>
+      <label htmlFor="searchTerm"></label>
       <div className="recipe-name">
         <input
           type="text"
           name="searchTerm"
           id="searchTerm"
+          placeholder="Search Recipe Here"
           value={recipeSearch}
           onChange={(e) => {
             setRecipeSearch(e.target.value);
           }}
         />
-        <label htmlFor="diet">Choose a diet type:</label>
+      </div>
+      <div className="select-input">
+        <label className="select-label" htmlFor="diet">
+          Choose a diet type:
+        </label>
         <select
           name="diet-type"
           id="diet"
@@ -54,6 +59,8 @@ const Form = ({ setTerm, dietSelect, calorieSelect }: Props) => {
           <option value="low-fodmap">Low FODMAP</option>
           <option value="whole-30">Whole30</option>
         </select>
+      </div>
+      <div className="range-input">
         <label htmlFor="calories">Find by calories</label>
         <input
           type="range"

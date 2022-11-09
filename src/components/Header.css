@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header .home-link {
+  text-decoration: none;
+}
+
+.Header h1 {
+  display: flex;
+}
+
+.Header .favorites-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.Header .favorites-link:hover {
+}
