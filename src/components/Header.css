@@ -1,33 +1,42 @@
 .Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f1ab24;
-  padding: 10px 20px;
 }
 
 .Header .home-link {
+  position: relative;
   text-decoration: none;
+  padding-left: 20px;
 }
 
 .Header h1 {
+  position: relative;
   display: flex;
   align-items: center;
   color: #5f5d5d;
 }
 
 .Header .peanut {
+  position: relative;
   margin: 3px 0px 3px 3px;
   height: 75px;
   width: 75px;
 }
 
 .Header .favorites-link {
+  position: relative;
   display: flex;
   text-decoration: none;
   color: #5f5d5d;
   font-weight: 600;
+  padding-right: 20px;
 }
 
 .Header .favorites-link:hover {
+  color: #ee6055;
 }
