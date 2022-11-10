@@ -10,7 +10,10 @@ const Header = () => {
           Goober <Icon icon="game-icons:peanut" className="peanut" /> Eats
         </h1>
       </Link>
-
+      <p className="logo">
+        Our recipes are shella good!!!{" "}
+        <span>(You know? Shells. Like peanut shells? You get it)</span>
+      </p>
       <Link className="favorites-link" to="/favorites">
         Favorites
       </Link>

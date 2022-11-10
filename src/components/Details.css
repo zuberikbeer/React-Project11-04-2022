@@ -33,6 +33,14 @@
   width: 328px;
 }
 
+.Details .MediaQ.desktop {
+  display: none;
+}
+
+.Details .MediaQ.mobile {
+  height: 120px;
+}
+
 .Details .clean-text {
   margin-left: 10px;
   background-color: #6fa82a;
@@ -60,7 +68,7 @@
   text-decoration: none;
   font-family: "Gochi Hand", cursive;
   margin-top: 5px;
-  padding: 5px;
+  padding: 5px 148px 5px 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -73,27 +81,45 @@
   }
 
   .Details .img-container {
-    height: 450px;
-    width: 600px;
+    /* height: 450px;
+    width: 600px; */
     margin-right: 10px;
+    width: 100%;
   }
 
   .Details img {
-    height: 403px;
-    width: 564px;
+    /* height: 403px;
+    width: 564px; */
+    width: 90%;
+    object-fit: cover;
   }
 
   .Details .img-details {
     flex-direction: row;
+    flex: 1;
   }
 
-  .Details .MediaQ {
+  .Details .clean-text {
+    flex: 1;
+    padding: 5px;
+  }
+
+  .Details .MediaQ.mobile {
+    display: none;
+  }
+
+  .Details .MediaQ.desktop {
     margin: 0px, 20px 10px 50px;
     width: 250px;
+    display: block;
   }
   .Details .small-details {
     margin-bottom: 10px;
   }
-  .Details p {
+  .Details .clean-p {
+    margin-top: 10px;
+  }
+  .Details a {
+    padding: 5px 23px 5px 5px;
   }
 }

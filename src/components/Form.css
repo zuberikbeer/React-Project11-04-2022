@@ -13,16 +13,29 @@
   align-items: center;
   background-color: #ee6055;
   font-weight: bold;
+  border-radius: 15px;
 }
 
 .Form .recipe-name {
   display: flex;
   padding: 28px 10px;
   background-color: #ee6055;
+  border-radius: 15px;
+  border: none;
 }
 
 .Form #searchTerm {
   width: 140px;
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  background-color: #d3d3d3;
+  color: black;
+  outline: none;
+}
+
+.Form #searchTerm::placeholder {
+  color: black;
 }
 
 .Form .range-input {
@@ -37,6 +50,16 @@
   padding: 20.3px 10px;
   background-color: #ee6055;
   flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.Form #diet {
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  background-color: #d3d3d3;
+  outline: none;
 }
 
 .Form .searchCalories {

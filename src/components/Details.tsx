@@ -29,7 +29,7 @@ const Details = () => {
               <img src={recipe?.image} />
             </div>
 
-            <div className="MediaQ">
+            <div className="MediaQ mobile">
               <p className="small-details">
                 Cooking Time:{" "}
                 {recipe?.readyInMinutes > 0
@@ -48,7 +48,24 @@ const Details = () => {
             </div>
           </div>
           <div className="clean-text">
-            <p>{cleanText}</p>
+            <div className="MediaQ desktop">
+              <p className="small-details">
+                Cooking Time:{" "}
+                {recipe?.readyInMinutes > 0
+                  ? recipe?.readyInMinutes
+                  : "Information not found! :( "}{" "}
+                mins
+              </p>
+              <p className="small-details">
+                {" "}
+                Servings:{" "}
+                {recipe?.servings
+                  ? recipe.servings
+                  : "Information not found! :( "}
+              </p>
+              <a href={recipe.sourceUrl}>Looking for the recipe? Click here!</a>
+            </div>
+            <p className="clean-p">{cleanText}</p>
           </div>
         </div>
       ) : (

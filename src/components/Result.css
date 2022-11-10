@@ -28,6 +28,15 @@
   border-radius: 20px;
 }
 
+.Result .fav:hover {
+  background: linear-gradient(127deg, #ee6055, #ee6055, #f1ab24, #ee6055);
+  color: white;
+}
+
+.Result .fav:active {
+  transform: translateY(4px);
+}
+
 .Result .heart {
   color: black;
   margin-left: 5px;
