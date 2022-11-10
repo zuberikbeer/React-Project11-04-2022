@@ -51,7 +51,8 @@
 
 .Form .actualButton {
   font-family: "Aboreto", cursive;
-  background-color: #ee6055;
+  /* background-color: #ee6055; */
+  background: linear-gradient(127deg, #ee6055, #ee6055, #f1ab24, #ee6055);
   border-radius: 7px;
   height: 30px;
   width: 200px;
@@ -88,4 +89,13 @@ input[type="range"]::-webkit-slider-thumb {
   background: #5f5d5d;
   box-shadow: -85px 0 0 80px #f4e87c;
   border-radius: 50%;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
 }

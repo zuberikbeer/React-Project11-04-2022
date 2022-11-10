@@ -2,4 +2,34 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 150px;
+}
+
+.Favorites .Result {
+  margin-bottom: 30px;
+}
+
+.Favorites .Result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #f4e87c; */
+  background: linear-gradient(127deg, #f4e97c, #ffcd84f5, #ffc700, #f4e97c);
+}
+
+.Favorites li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 430px;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .Favorites {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
