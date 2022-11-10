@@ -25,6 +25,7 @@
   width: 375px;
   background: linear-gradient(127deg, #f4e97c, #ffcd84f5, #ffc700, #f4e97c);
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .Details img {
@@ -49,6 +50,7 @@
 
 .Details .small-details {
   background-color: #ee6055;
+  margin-bottom: 10px;
 }
 
 .Details a {
@@ -62,9 +64,23 @@
 }
 
 @media screen and (min-width: 768px) {
+  .Details h1 {
+    margin-left: 54px;
+  }
   .Details .recipes {
     display: flex;
-    flex-direction: column;
+    margin: 0px 50px 0px 50px;
+  }
+
+  .Details .img-container {
+    height: 450px;
+    width: 600px;
+    margin-right: 10px;
+  }
+
+  .Details img {
+    height: 403px;
+    width: 564px;
   }
 
   .Details .img-details {
@@ -72,7 +88,12 @@
   }
 
   .Details .MediaQ {
-    margin-left: 10px;
+    margin: 0px, 20px 10px 50px;
+    width: 250px;
+  }
+  .Details .small-details {
     margin-bottom: 10px;
+  }
+  .Details p {
   }
 }
