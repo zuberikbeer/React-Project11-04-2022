@@ -1,5 +1,6 @@
 .Details {
   margin: 10px;
+  margin-top: 150px;
 }
 
 .Details h1 {
@@ -20,9 +21,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 325px;
   width: 375px;
-  background-color: #f4e87c;
+  background: linear-gradient(127deg, #f4e97c, #ffcd84f5, #ffc700, #f4e97c);
   border-radius: 5px;
 }
 
@@ -58,4 +59,20 @@
   font-family: "Gochi Hand", cursive;
   margin-top: 5px;
   padding: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .Details .recipes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Details .img-details {
+    flex-direction: row;
+  }
+
+  .Details .MediaQ {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
 }

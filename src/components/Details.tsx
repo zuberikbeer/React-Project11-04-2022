@@ -29,21 +29,23 @@ const Details = () => {
               <img src={recipe?.image} />
             </div>
 
-            <p className="small-details">
-              Cooking Time:{" "}
-              {recipe?.readyInMinutes > 0
-                ? recipe?.readyInMinutes
-                : "Information not found! :( "}{" "}
-              mins
-            </p>
-            <p className="small-details">
-              {" "}
-              Servings:{" "}
-              {recipe?.servings
-                ? recipe.servings
-                : "Information not found! :( "}
-            </p>
-            <a href={recipe.sourceUrl}>Looking for the recipe? Click here!</a>
+            <div className="MediaQ">
+              <p className="small-details">
+                Cooking Time:{" "}
+                {recipe?.readyInMinutes > 0
+                  ? recipe?.readyInMinutes
+                  : "Information not found! :( "}{" "}
+                mins
+              </p>
+              <p className="small-details">
+                {" "}
+                Servings:{" "}
+                {recipe?.servings
+                  ? recipe.servings
+                  : "Information not found! :( "}
+              </p>
+              <a href={recipe.sourceUrl}>Looking for the recipe? Click here!</a>
+            </div>
           </div>
           <div className="clean-text">
             <p>{cleanText}</p>

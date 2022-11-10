@@ -10,7 +10,7 @@ interface Props {
 const Form = ({ setTerm, dietSelect, calorieSelect }: Props) => {
   const [recipeSearch, setRecipeSearch] = useState("");
   const [dietSearch, setDietSearch] = useState("");
-  const [searchCalories, setSearchCalories] = useState("");
+  const [searchCalories, setSearchCalories] = useState("1000");
   const submitHandler = (e: FormEvent) => {
     e.preventDefault();
     setTerm(recipeSearch);

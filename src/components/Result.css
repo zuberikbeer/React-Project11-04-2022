@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4e87c;
+  /* background-color: #f4e87c; */
+  background: linear-gradient(127deg, #f4e97c, #ffcd84f5, #ffc700, #f4e97c);
 }
 
 .Result li {
@@ -49,4 +50,5 @@
   justify-content: center;
   text-align: center;
   width: 300px;
+  font-weight: 600;
 }
